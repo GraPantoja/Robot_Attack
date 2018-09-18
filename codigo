@@ -1,0 +1,679 @@
+int pantalla=0;
+int seleccion=0;
+int turno=0;
+int[] jugador1=new int[4];
+int[] jugador2=new int[4];
+
+int[] p1=new int[4];
+int[] p2=new int[4];
+int[] p3=new int[4];
+int[] p4=new int[4];
+int[] p5=new int[4];
+int[] p6=new int[4];
+
+void  personaje1()
+{
+  fill(255);
+  text("A.I.",100,150);
+  fill(255,60);
+ rect(175,175,100,100);
+ fill(200,70);
+ rect(150,150,150,150);
+fill(150);
+ rect(50,210,100,20);
+ fill(150);
+ rect(300,210,100,20); 
+ fill(150);
+ rect(220,100,20,50);
+ fill(150);
+ rect(220,300,20,50);
+   fill(random(0,255),0,0);
+ rect(200,220,40,40);
+}
+
+void personaje2()
+{
+  fill(255);
+  text("Robot01",100,150);
+  //cabeza
+  fill(200);
+  rect(210,80,7,20);
+ rect(200,100,60,60);
+ fill(255);
+ rect(220,115,20,20);
+  fill(random(0,255),0,0);
+ rect(225,125,5,5);
+//torzo
+
+  fill(180);
+ rect(185,150,90,100);
+   fill(255,0,0);
+ rect(250,160,20,20);
+ //pies
+  fill(180);
+ rect(185,230,30,100);
+ rect(245,230,30,100);
+ //brazos
+ fill(160);
+ rect(165,155,20,80);
+ rect(275,155,20,80);
+}
+
+void personaje3() 
+{
+  fill(255);
+  text("Robot02",80,150);
+  noStroke();
+ //cabeza
+   rect(195,70,7,20);
+ fill(170);
+  rect(180,90,120,90);
+  fill(255);
+  rect(215,110,50,40);
+  fill(random(0,255),0,0);
+  rect(240,120,5,25);
+  //torzo
+   fill(180);
+ rect(215,180,50,100);
+   fill(255,0,0);
+ rect(250,190,10,10);
+ //brazos
+ fill(160);
+ rect(185,180,20,60);
+rect(275,180,20,60);
+//pies
+ fill(180);
+ rect(195,260,20,60);
+rect(265,260,20,60);
+ 
+}
+
+
+void personaje4() 
+{
+  fill(255);
+  text("Carmine",80,150);
+   noStroke();
+  //cabeza
+   fill(0,100,255);
+  rect(215,155,30,20);
+  fill(0,80,255);
+  rect(200,100,60,60);
+ fill(random(0,100),0,30);
+  rect(230,125,40,20);
+  fill(200,0,60,70);
+  rect(255,125,5,20);
+  rect(240,125,5,20);
+  rect(265,125,5,20);
+   
+  //cuerpo
+   fill(0,100,255);
+  rect(195,175,70,100);
+
+   
+   //manos
+     fill(200,150,0);
+     rect(200,255,95,10);
+     
+      fill(200);
+     rect(270,255,30,35);
+     
+     fill(0,20,255);
+   rect(200,180,20,75);
+   
+   fill(0,20,255);
+   rect(265,180,75,20);
+    
+     fill(100);
+   rect(320,170,40,20);
+     
+      fill(100);
+   rect(320,200,10,10);
+   
+   fill(190);
+   rect(200,250,20,20);
+  
+    fill(200,100,0);
+   rect(185,175,10,95);
+   
+   //pies
+    fill(0,20,255);
+   rect(240,275,20,75);
+   
+    fill(0,20,255);
+   rect(200,275,20,75);
+   
+   
+  
+ 
+  
+  
+}
+
+void personaje5()
+{
+    fill(255);
+  text("J. Price",115,150);
+   noStroke();
+   //cabeza
+   fill(0,100,255);
+  rect(215,155,30,20);
+  fill(50,80,255);
+  rect(200,100,60,60);
+ fill(random(0,100),0,30);
+  rect(230,125,40,20);
+  fill(200,0,60,70);
+  rect(255,125,5,20);
+  rect(240,125,5,20);
+  rect(265,125,5,20);
+  
+      fill(50,80,255);
+  rect(205,90,10,10);
+      fill(50,80,255);
+  rect(240,90,10,10);
+   
+  //cuerpo
+    fill(50,80,255);
+  rect(195,175,70,100);
+      fill(50,80,255);
+  rect(195,165,10,10);
+    fill(50,80,255);
+  rect(255,165,10,10);
+
+   
+   //manos
+     fill(200,150,0);
+     rect(200,255,95,10);
+     
+      fill(200);
+     rect(270,255,30,35);
+     
+     fill(100,20,255);
+   rect(200,180,20,75);
+   
+   fill(100,20,255);
+   rect(265,180,75,20);
+    //arma
+     fill(100);
+   rect(320,170,60,20);
+    fill(100);
+   rect(380,170,10,10);
+   fill(255,0,0);
+   rect(325,175,40,5);
+     
+     
+      fill(100);;
+   rect(320,200,10,10);
+   
+   fill(190);
+   rect(200,250,20,20);
+  
+   
+   
+   //pies
+   fill(100,20,255);
+   rect(240,275,20,75);
+   
+    fill(100,20,255);
+   rect(200,275,20,75);
+}
+
+
+void personaje6() 
+{
+    fill(255);
+  text("McTavish",105,150);
+   noStroke();
+ //cabeza
+   fill(0,100,255);
+  rect(215,155,30,20);
+  fill(0,205,255);
+  rect(200,100,60,60);
+  fill(random(0,100),0,30);
+  rect(230,125,40,20);
+  fill(200,0,60,70);
+  rect(255,125,5,20);
+  rect(240,125,5,20);
+  rect(265,125,5,20);
+  
+     fill(0,205,255);
+  rect(205,90,10,10);
+    fill(0,205,255);
+  rect(240,90,10,10);
+   
+  //cuerpo
+ fill(0,205,255);
+  rect(195,175,70,100);
+    fill(0,205,255);
+  rect(195,165,10,10);
+    fill(0,205,255);
+  rect(255,165,10,10);
+ fill(255);
+  rect(185,175,10,80);
+   
+   //manos
+     fill(200,150,0);
+     rect(200,255,95,10);
+     
+      fill(200);
+     rect(270,255,60,35);
+     fill(200);
+     rect(340,255,10,30);
+      fill(200);
+     rect(290,255,60,10);
+     
+     fill(0,160,255);
+   rect(200,180,20,75);
+     fill(0,160,255);
+   rect(265,180,75,20);
+   
+    //arma
+     fill(100);
+   rect(320,170,80,20);
+   rect(320,160,10,10);
+    fill(100);
+   rect(380,170,10,10);
+   fill(255,0,0);
+   rect(325,175,40,5);
+     
+     
+      fill(100);;
+   rect(320,200,10,10);
+   
+   fill(190);
+   rect(200,250,20,20);
+  
+   
+   
+   //pies
+     fill(0,160,255);
+   rect(240,275,20,75);
+   
+     fill(0,160,255);;
+   rect(200,275,20,75);
+}
+
+void setup()
+{
+  p1[0]=50;
+  p1[1]=40;
+  p1[2]=320;
+  p1[3]=0;
+
+  p2[0]=40;
+  p2[1]=40;
+  p2[2]=190;
+  p2[3]=0;
+
+  p3[0]=50;
+  p3[1]=30;
+  p3[2]=200;
+  p3[3]=0;
+
+  p4[0]=40;
+  p4[1]=36;
+  p4[2]=180;
+  p4[3]=0;
+  
+  p5[0]=25;
+  p5[1]=20;
+  p5[2]=300;
+  p5[3]=0;
+  
+  p6[0]=50;
+  p6[1]=40;
+  p6[2]=320;
+  p6[3]=0;
+  
+  size(1000, 800); 
+  background(255);
+  textSize(30);
+
+}
+
+void draw()
+{
+  
+   switch (pantalla)
+  {
+  case 0:
+  background(100);
+
+  
+    background(100);
+    pushMatrix();
+    translate(150,0);
+    textSize(20);
+    fill(0,0,random(0,255));
+    textSize(130);
+    createFont("Luz Calibri", 32);
+    text("Robot Attack",0,300);
+    fill(255);
+    textSize(20);
+    text("La humanidad esta apunto de extinguirse, Tú de que vando estas",5,500);
+    fill(random(0,255),0,0);
+    text("Presiona la Letra E para empezar esta epica batalla",50,450);
+    popMatrix();
+       pushMatrix();
+      
+       translate(300,410);
+    fill(255);
+  
+
+ fill(255,60);
+ rect(175,175,100,100);
+ fill(200,70);
+ rect(150,150,150,150);
+fill(150);
+ rect(50,210,100,20);
+ fill(150);
+ rect(300,210,100,20); 
+ fill(150);
+ rect(220,100,20,50);
+ fill(150);
+ rect(220,300,20,50);
+   fill(random(0,255),0,0);
+ rect(200,220,40,40);
+    popMatrix();
+    
+    pushMatrix();
+    frameRate(30);
+      strokeWeight(5);
+  stroke(0, 30);
+ 
+  int step = 10;
+  float nlevel = 0.1;
+  float lastx = -999;
+  float lasty = -999;
+  float ynoise = random(400);
+  float y=100;
+  int border = 20;
+  for (int x=border; x<=width-border;
+x+=step) {
+      y = 100 + noise(ynoise)*400;
+    if (lastx > -999) {
+   strokeWeight(noise(10)*2);
+      stroke(random(10,20),random(100,255), random(70,150),random(30,90));
+      line(x, y, lastx, lasty);
+    }
+    lastx = x;
+    lasty = y;
+    ynoise += nlevel;
+  }
+   popMatrix();
+    
+    break;
+  case 1:
+    background(50);
+     pushMatrix();
+    textSize(20); 
+    fill(0,130,255);
+    text("Seleccion de personajes",50,50);
+     text("click izquierdo elige personajes el j1",70,70);
+     text("click izquierdo elige personajes el j2",100,90);
+    popMatrix();
+    personaje1();    
+    pushMatrix();
+    translate(300, 0);
+    personaje2();
+    popMatrix();
+    
+    pushMatrix();
+    translate(600, 0);
+    personaje3();
+    popMatrix();
+
+    pushMatrix();
+    translate(0, 300);
+    personaje4();
+    popMatrix();
+
+    pushMatrix();
+    translate(300, 300);
+    personaje5();
+    popMatrix();
+
+    pushMatrix();
+    translate(600, 300);
+    personaje6();
+    popMatrix();
+
+    break;
+  case 2:
+    background(50);
+      fill(255,0,0);
+      textSize(24);
+    pushMatrix();
+ 
+      text("J1 Ataques A,S                                     J2 Ataques K,L", 200, 570);
+    popMatrix();
+     
+     pushMatrix();
+     textSize(35);
+     text("Fight", 460, 80);
+      popMatrix();
+    
+    pushMatrix();
+    fill(255,0,0);
+    rect(100,100,jugador1[2],30);
+    popMatrix();
+    
+    pushMatrix();
+    fill(255,0,0);
+    rect(700,100,jugador2[2],30);
+    popMatrix();
+    
+    pushMatrix();
+    translate(100, 150);
+    if (jugador1==p1)
+    {
+      personaje1();
+    } else if (jugador1==p2)
+    {
+      personaje2();
+    } else if (jugador1==p3)
+    {
+      personaje3();
+    } else if (jugador1==p4)
+    {
+      personaje4();
+    } else if (jugador1==p5)
+    {
+      personaje5();
+    } else if (jugador1==p6)
+    {
+      personaje6();
+    }
+    popMatrix();
+
+    pushMatrix();
+    translate(500, 150);
+    if (jugador2==p1)
+    {
+      personaje1();
+    } else if (jugador2==p2)
+    {
+      personaje2();
+    } else if (jugador2==p3)
+    {
+      personaje3();
+    } else if (jugador2==p4)
+    {
+      personaje4();
+    } else if (jugador2==p5)
+    {
+      personaje5();
+    } else if (jugador2==p6)
+    {
+      personaje6();
+    }
+    popMatrix();
+
+textSize(30);
+
+    if (jugador1[2]<=0)
+    {
+      fill(random(100,255));
+      
+      text("EL Jugador dos ha ganado preciona R para volver al menu",100, 700);
+      if (jugador1[2] <= 0)
+      {
+        jugador1[2]=0;
+      }
+  } else if (jugador2[2]<=0)
+    {
+      fill(random(100,255));
+      text("EL Jugador dos ha ganado preciona R para volver al menu", 50, 700);
+    if (jugador2[2] <= 0)
+      {
+        jugador2[2]=0;
+      }  
+    }
+    break;
+  }
+}
+
+
+void keyReleased()
+{
+  if (keyCode=='E')
+  {
+    pantalla=1;
+  }
+
+  if (turno==0&&pantalla==2)
+  {
+    if (key=='a'||key=='A')
+    {
+      jugador2[2]=jugador2[2]-(jugador1[0]-jugador2[3]);
+      println(jugador2[2]);
+      turno=1;
+    }
+    if (key=='s'||key=='S')
+    {
+      jugador2[2]=jugador2[2]-(jugador1[1]-jugador2[3]);
+      println(jugador2[2]);
+      turno=1;
+    }
+  }
+  if (turno==1&&pantalla==2)
+  {
+    if (key=='l'||key=='L')
+    {
+      jugador1[2]=jugador1[2]-(jugador2[0]-jugador1[3]);
+      println(jugador1[2]);
+      turno=0;
+    } 
+    if (key=='k'||key=='K')
+    {
+      jugador1[2]=jugador1[2]-(jugador2[1]-jugador1[3]);
+      println(jugador2[2]);
+      turno=0;
+    }
+  }
+
+  if (jugador1[2]<=0||jugador2[2]<=0)
+  {
+    if (key=='r')
+    {
+      pantalla=0;
+      p1[2]=200;
+      p2[2]=220;
+      p3[2]=200;
+      p4[2]=180;
+      p5[2]=300;
+      p6[2]=250;
+      seleccion=0;
+    }
+  }
+}
+
+void mouseClicked()
+{
+  if (pantalla==1)
+  {
+    
+    if (mouseX>0&&mouseX<300&&mouseY>0&&mouseY<400)
+    {
+      if (seleccion==0)
+      {
+        jugador1=p1;
+        seleccion=1;
+      } else if (seleccion==1)
+      {
+        jugador2=p1;
+        pantalla=2;
+      }
+    }
+
+   
+    if (mouseX>300&&mouseX<600&&mouseY>0&&mouseY<400)
+    {
+      if (seleccion==0)
+      {
+        jugador1=p2;
+        seleccion=1;
+      } else if (seleccion==1)
+      {
+        jugador2=p2;
+        pantalla=2;
+      }
+    }
+
+   
+    if (mouseX>600&&mouseX<1000&&mouseY>0&&mouseY<400)
+    {
+      if (seleccion==0)
+      {
+        jugador1=p3;
+        seleccion=1;
+      } else if (seleccion==1)
+      {
+        jugador2=p3;
+        pantalla=2;
+      }
+    }
+
+  
+    if (mouseX>0&&mouseX<300&&mouseY>400&&mouseY<800)
+    {
+      if (seleccion==0)
+      {
+        jugador1=p4;
+        seleccion=1;
+      } else if (seleccion==1)
+      {
+        jugador2=p4;
+        pantalla=2;
+      }
+    }
+
+    
+    if (mouseX>300&&mouseX<600&&mouseY>400&&mouseY<800)
+    {
+      if (seleccion==0)
+      {
+        jugador1=p5;
+        seleccion=1;
+      } else if (seleccion==1)
+      {
+        jugador2=p5;
+        pantalla=2;
+      }
+    }
+
+   
+    if (mouseX>600&&mouseX<1000&&mouseY>400&&mouseY<800)
+    {
+      if (seleccion==0)
+      {
+        jugador1=p6;
+        seleccion=1;
+      } else if (seleccion==1)
+      {
+        jugador2=p6;
+        pantalla=2;
+      }
+    }
+  }
+}
